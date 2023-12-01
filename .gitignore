@@ -180,3 +180,5 @@ Cargo.lock
 # End of https://www.toptal.com/developers/gitignore/api/Rust
 
 .DS_Store
+input.txt
+example.txt
