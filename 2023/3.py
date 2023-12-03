@@ -42,7 +42,6 @@ for symbol in symbol_cords:
                 done.add((nx, ny))
                 digits += matrix[nx][ny]
                 ny += 1
-            print(digits)
             numbers.append(int(digits))
 print("A", len(set(numbers)))
 print("B", len(numbers))

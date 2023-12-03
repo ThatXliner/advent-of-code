@@ -41,7 +41,6 @@ for symbol in symbol_cords:
                 done.add((nx, ny))
                 digits += matrix[nx][ny]
                 ny += 1
-            print(digits)
             numbers.append(int(digits))
     if len(numbers) == 2:
         total += numbers[0] * numbers[1]
