@@ -45,17 +45,21 @@ def convert(r: range, using: list[tuple[range, int]]):
             or r.start in source
             or r.stop in source
         ):
+            # Selected range
             orig = range(max(r.start, source.start), min(r.stop, source.stop))
+            # Transformed range
             new = range(
                 max(r.start, source.start) + transform,
                 min(r.stop, source.stop) + transform,
             )
             output.append((orig, new))
     output.sort(key=lambda x: x[0].start)
+    # Unchanged
     if len(output) == 0:
         return [r]
 
     last_start = r.start
+    # Put back the unchanged ranges
     final_output = []
     for i, transformed in enumerate(output):
         if last_start < transformed[0].start:
