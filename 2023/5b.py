@@ -1,6 +1,5 @@
 from collections import defaultdict
-from itertools import zip_longest, batched
-from dataclasses import dataclass
+from itertools import batched
 
 seed_ranges = list(
     map(
