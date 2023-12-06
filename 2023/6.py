@@ -8,7 +8,6 @@ total = 1
 for i, time in enumerate(times):
     t = 0
     for time_spent_charging in range(time):
-        speed = time_spent_charging
-        t += speed * (time - time_spent_charging) > distances[i]
+        t += time_spent_charging * (time - time_spent_charging) > distances[i]
     total *= t
 print(total)
